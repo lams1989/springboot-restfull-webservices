@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.lams1989.rest.restfullwebservices.beans.User;
 
-@Component
+@Service
 public class UserDaoService {
 	private static List<User> users = new ArrayList<>();
 	

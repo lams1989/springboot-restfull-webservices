@@ -2,12 +2,18 @@ package com.lams1989.rest.restfullwebservices.beans;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
 
+@Entity
 public class User {
 	
+	@Id
+	@GeneratedValue
 	private Integer id;
 	
 	@Size(min = 2, max = 200, message = "Name Me must be between 2 and 200 characters")
@@ -16,6 +22,10 @@ public class User {
 	@Past
 	private Date birthDate;
 	
+	
+	public User() {
+		super();
+	}
 	
 	public User(Integer id, String name, Date birthDate) {
 		super();
